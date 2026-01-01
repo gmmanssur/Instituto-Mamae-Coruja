@@ -1,0 +1,148 @@
+.founder {
+    background: lightyellow;
+    color: #333;
+    padding: 20px 40px;
+    align-content: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.founder-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    gap: 2rem;
+    text-align: center;
+
+    h1 {
+        color: #6d68cb;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+    }
+
+    p {
+        color: #666;
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+}
+
+.founder-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.founder-image {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        height: 500px;
+        width: 100%;
+        min-width: 300px;
+        max-width: 400px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.quote {
+    position: relative;
+    margin-top: -40px;
+    left: 80px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 1rem 0.5rem;
+    font-style: italic;
+    color: #4b3a91;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.quote:hover {
+    transform: translateX(10px);
+}
+
+.quote svg {
+    color: #7b4dd3;
+    min-width: 20px;
+}
+
+.founder-text {
+    flex: 1;
+
+    h2 {
+        font-size: 1.8rem;
+        color: #222;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        text-align: justify;
+        color: #555;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+}
+
+.founder-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    min-width: 150px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    flex-wrap: wrap;
+
+    flex: 1;
+
+    svg {
+        color: rgb(168 85 247);
+        font-weight: bold
+    }
+
+    i {
+        font-size: 1.8rem;
+        color: #8b6ef3;
+        margin-bottom: 0.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        color: #222;
+    }
+
+    p {
+        color: #666;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .founder-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 570px) {
+    .quote {
+        left: 15px;
+    }
+}

@@ -1,0 +1,213 @@
+.donation {
+    width: 100%;
+    padding: 20px 40px;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.donation-container {
+    flex-direction: column;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0px;
+}
+
+.donation-content {
+    flex: 1;
+    order: 1;
+}
+
+.donation-header {
+    text-align: center;
+
+    h1 {
+        font-size: 2rem;
+        color: #f43f5e;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        color: #fff;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+    }
+}
+
+.donation-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1.5rem;
+    max-width: 320px;
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+
+    h2, p, span {
+        margin: 1rem 0rem;
+        height: 20px;
+    }
+
+    button {
+        color: #fff;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.6rem 1.5rem;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 100%;
+    }
+}
+
+.individual button { background: linear-gradient(135deg, #a5e780, #69b73d); }
+.mensal button { background: linear-gradient(135deg, #a855f7, #6366f1); }
+.especial button { background: linear-gradient(135deg, #3b82f6, #06b6d4); }
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-donation {
+    align-content: center;
+
+    img {
+        width: 100%;
+        max-width: 50px;
+        padding-bottom: 0.2rem;
+    }
+}
+
+.card.individual {
+    background: #f8fdf8;
+}
+
+.card.mensal {
+    background: #f2e8ff;
+}
+
+.card.especial {
+    background: #e5f6ff;
+}
+
+.impact {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+}
+
+.impact-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.impacto-header .icon {
+    font-size: 1.8rem;
+}
+
+.impact-amount {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    div {
+        min-width: 150px;
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 1.3rem;
+    }
+
+    p {
+        margin-top: 0.3rem;
+        font-size: 0.9rem;
+    }
+}
+
+body.pix-modal-open {
+    overflow: hidden;
+}
+
+.pix-donation-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+}
+
+.pix-donation-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: min(90vw, 420px);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(18px);
+    color: rgba(255, 255, 255, 0.92);
+    animation: pixDonationEnter 0.4s ease;
+}
+
+@keyframes pixDonationEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.pix-donation-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.pix-donation-content img {
+    width: 180px;
+    margin: 0 auto;
+}
+
+.pix-donation-key {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+    .pix-donation-content {
+        padding: 1.5rem;
+    }
+
+    .pix-donation-content img {
+        width: 150px;
+    }
+}

@@ -1,0 +1,546 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Instituto Mamãe Coruja</title>
+        <link rel="icon" type="image/png" href="assets/logo.jpg" />
+        <link href="https://fonts.googleapis.com/css2?family=Caprasimo&amp;family=Concert+One&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Quicksand:wght@300..700&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+        <link type="text/css" rel="stylesheet" href="styles/style.css" />
+        <link type="text/css" rel="stylesheet" href="styles/navbar.css" />
+        <link type="text/css" rel="stylesheet" href="styles/hero.css" />
+        <link type="text/css" rel="stylesheet" href="styles/about.css" />
+        <link type="text/css" rel="stylesheet" href="styles/founder.css" />
+        <link type="text/css" rel="stylesheet" href="styles/footer.css" />
+        <link type="text/css" rel="stylesheet" href="styles/donation.css" />
+        <link type="text/css" rel="stylesheet" href="styles/gallery.css" />
+        <link type="text/css" rel="stylesheet" href="styles/volunteer.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <section class="navbar-container">
+                <div class="navbar-content">
+                    <div class="logo">
+                        <h1>Instituto Mamãe Coruja</h1>
+                    </div>
+
+                    <nav class="navbar-menu">
+                        <ul>
+                            <li><a href="#home">Início</a></li>
+                            <li><a href="#aboutus">Sobre Nós</a></li>
+                            <li><a href="#project-founder">Fundadora</a></li>
+                            <li><a href="#help">Doação</a></li>
+                            <li><a href="#galleries">Galeria</a></li>
+                            <li><a href="#volunteers">Voluntários</a></li>
+                        </ul>
+                    </nav>
+
+                    <button id="menuToggle" class="navbar-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                    </button>
+                </div>            
+            </section>
+
+            <section id="home" class="hero" aria-labelledby="hero-title">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <header class="hero-header">
+                            <h1 id="hero-title" class="hero-title">
+                                Instituto
+                                <br>
+                                <span class="hero-title-highlight">Mamãe Coruja</span>
+                            </h1>
+                        </header>
+
+                        <p class="hero-description">
+                            Transformando vidas através do amor, cuidado e apoio às famílias em situação de vulnerabilidade.
+                            Juntos, formamos uma legião do bem e contribuímos para amenizar o sofrimento da sociedade.
+                        </p>
+
+                        <div class="hero-actions">
+                            <button
+                                type="button"
+                                id="openModalBtn"
+                                class="btn btn-primary"
+                                aria-haspopup="dialog"
+                            >
+                                Participar do Projeto
+                            </button>
+
+                            <a
+                                href="#aboutus"
+                                class="btn btn-secondary"
+                            >
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+
+                    <figure class="hero-media">
+                        <picture>
+                            <source srcset="assets/owl.png" type="image/png">
+                            <img
+                                src="assets/owl.png"
+                                alt="Ilustração de uma coruja simbolizando cuidado, proteção e acolhimento"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </picture>
+
+                        <figcaption class="hero-stats">
+                            <article class="stat donations">
+                                <span class="stat-icon" aria-hidden="true">🎁</span>
+                                <div class="stat-content">
+                                    <strong class="stat-value">1000+</strong>
+                                    <p class="stat-label">Doações realizadas</p>
+                                </div>
+                            </article>
+
+                            <article class="stat families">
+                                <span class="stat-icon" aria-hidden="true">👨‍👩‍👧‍👦</span>
+                                <div class="stat-content">
+                                    <strong class="stat-value">4000+</strong>
+                                    <p class="stat-label">Pessoas atendidas</p>
+                                </div>
+                            </article>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div id="join" class="joinProject">
+                    <div class="popUpJoin">
+                        <div class="formHeader">
+                            <div class="closeBtn">
+                                <span class="close-icon">&times;</span>
+                            </div>
+                            <h2>Junte-se ao Instituto Mamãe Coruja</h2>
+                            <p>Preencha o formulário abaixo para participar do nosso projeto e fazer a diferença na vida de mães solos e suas famílias.</p>
+                            <p>A sua compaixão é o que muda vidas, doe agora mesmo atráves das chaves PIX abaixo:</p>
+                            <img src="assets/qrcode_valorlivre.png" alt="Qr Code PIX">
+                            <p class="pix">Chave: instituto.mamaecoruja@yahoo.com</span>
+                        </div>
+
+                        <form class="joinForm">
+                            <div class="name">
+                                <label for="name">Nome Completo:</label>
+                                <input type="text" id="name" name="name" required />
+                            </div>
+
+                            <div class="phone">
+                                <label for="phone">Telefone:</label>
+                                <input type="tel" id="phone" name="phone" required />
+                            </div>
+
+                            <div class="field">
+                                <label for="interest">Área de Interesse:</label>
+                                <select id="interest" name="interest" required>
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="Voluntário(a )">Voluntariado</option>
+                                    <option value="Apoiador(a)">Doação</option>
+                                    <option value="Parceiro(a)">Parceria</option>
+                                </select>
+                            </div>    
+                        </form>
+
+                        <button id="modal-submit-btn" type="submit" class="btn-submit">Enviar</button>
+                    </div>
+                </div>
+
+                <div id="custom-alert" class="custom-alert">
+                    <span id="alert-message"></span>
+                </div>
+            </section>
+
+            <section id="aboutus" class="about">
+                <div class="about-container">
+                    <div class="about-content">
+                        <h1>Sobre Nós</h1>
+                        <p>
+                            O Instituto mamãe coruja nasceu do sonho de criar um mundo mais colorido, onde as mães solos tivessem acesso ao amor, cuidado e oportunidade que merecem.
+                        </p>
+                        <p>
+                            Trabalhamos incansavelmente para fortalecer vidas e as ajudamos seguir buscando novos sonhos.
+                        </p>
+                    </div>
+
+                    <div class="cards">
+                        <div class="card">
+                            <div class="icon-border">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                                </span>
+                            </div>
+                            <h2>Amor e Cuidado</h2>
+                            <p>Oferecemos amor incondicional e cuidado especializado para cada família que atendemos.</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="icon-border">
+                                <svg style="padding-bottom: 0.4rem;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path></svg>
+                            </div>
+                            <h2>Proteção</h2>
+                            <p>Garantimos um ambiente seguro, carinho e acolhimento as mães solos.</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="icon-border">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                </span>
+                            </div>
+                            <h2>Comunidade</h2>
+                            <p>Fortalecemos os laços comunitários e promovemos a união entre as famílias.</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="icon-border">
+                                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span>
+                            </div>
+                            <h2>Propósito</h2>
+                            <p>Trabalhamos com foco na transformação social e no desenvolvimento humano integral.</p>
+                        </div>
+                    </div>
+
+                    <div class="mission-content">
+                        <div class="mission-text">
+                            <h2>Nossa Missão</h2>
+                            <p>O Instituto Mamãe Coruja é uma organização sem fins lucrativos que visa apoiar <b>Mães</b> solos em situação de vulnerabilidade social. Acreditamos que o amparo, seja material ou emocional, pode ser o impulso para nossos recomeços.</p>
+                            <br />
+                            <p>Nossa equipe é formada por voluntários dedicados que trabalham com amor, comprometimento e muita responsabilidade social. Todos que se unem ao instituto, são mãos estendidas com o mesmo objetivo de fortalecer vidas!</p>
+                        </div>
+
+                        <div class="mission-image">
+                            <img src="assets/mission2.jpg" alt="mission img"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="project-founder" class="founder">
+                <div class="founder-container">
+                    <h1 class="section-title">Nossa Fundadora</h1>
+                    <p class="section-subtitle">
+                        Conheça a história inspiradora por trás do Instituto Mamãe Coruja
+                    </p>
+
+                    <div class="founder-content">
+                        <div class="founder-image">
+                            <img src="assets/founder.jpg" alt="Fundadora do Instituto Mamãe Coruja" />
+
+                            <div class="quote">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-purple-500 mb-2"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
+                                <br />
+                                <p>"Siga sempre fazendo o seu melhor, para que o melhor possa acontecer."</p>
+                            </div>
+                        </div>
+
+                        <div class="founder-text">
+                            <h2>Samara</h2>
+                            <p>
+                                Casada há 26 anos com Mário — advogado, professor e gestor — é mãe de duas filhas, Beatriz e Maria Luiza. Bacharel em Direito e pós-graduada em Constelação Familiar, construiu uma trajetória marcada pela empatia e dedicação ao próximo. Desde a infância, inspirada pelo exemplo dos pais, aprendeu o valor de semear o amor e estender as mãos, atuando como voluntária em orfanatos, ONGs e ações comunitárias voltadas à assistência de famílias em vulnerabilidade.
+                            </p>
+                            <p>
+                                Ao longo dos anos, desenvolveu metodologias de cuidado integral e atendimento humanizado, sempre priorizando o desenvolvimento emocional e o respeito à individualidade de cada ser. Hoje, reúne uma ampla bagagem de experiências sociais e segue firme em sua missão de unir pessoas com o mesmo propósito: servir, acolher e transformar vidas com amor, empatia e excelência.
+                            </p>
+
+                            <div class="founder-stats">
+                                <div class="stat-card">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-purple-500 mx-auto mb-2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                    <h3>8+</h3>
+                                    <p>Anos de Experiência</p>
+                                </div>
+
+                                <div class="stat-card">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-purple-500 mx-auto mb-2"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                                    <h3>50+</h3>
+                                    <p>Projetos Realizados</p>
+                                </div>
+
+                                <div class="stat-card">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-purple-500 mx-auto mb-2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                                    <h3>2024</h3>
+                                    <p>Fundação do Instituto</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="help" class="donation">
+                <div class="donation-container">
+                    <div class="donation-content">
+                        <div class="donation-header">
+                            <h1>Faça uma Doação</h1>
+                            <p>
+                                Sua generosidade pode transformar vidas. Cada doação gera uma reação na vida de alguém.
+                            </p>
+                        </div>
+
+                        <div class="donation-cards">
+                            <div class="card individual">
+                                <div class="icon-donation">
+                                    <img src="assets/baby_solo_owl.png" alt="icon donation"/>
+                                </div>
+                                <h2>Doação Baby</h2>
+                                <p>Faça uma doação pontual e ajude uma família hoje mesmo.</p>
+                                <span class="amount">R$ 50</span>
+                                <button id="btn-donation-baby" onclick="openPixDonationModal('assets/qrcode_50reais.png')">Doar Agora</button>
+                            </div>
+
+                            <div class="card mensal">
+                                <div class="icon-donation">
+                                    <img style="background: #f2e8ff" src="assets/solo_owl.png" alt="icon donation"/>
+                                </div>
+                                <h2>Doação Premium</h2>
+                                <p>Torne-se um padrinho e transforme vidas.</p>
+                                <span class="amount">R$ 100</span>
+                                <button id="btn-donation-premium" onclick="openPixDonationModal('assets/qrcode_100reais.png')">Doar Agora</button>
+                            </div>
+
+                            <div class="card especial">
+                                <div class="icon-donation">
+                                    <img style="background: #e5f6ff" src="assets/owl.png" alt="icon donation"/>
+                                </div>
+                                <h2>Doação VIP</h2>
+                                <p>Contribua com um valor personalizado para o nosso instituto.</p>
+                                <span class="amount">Valor livre</span>
+                                <button id="btn-donation-vip" onclick="openPixDonationModal('assets/qrcode_valorlivre.png')">Doar Agora</button>
+                            </div>
+                        </div>
+
+                        <div class="impact">
+                            <div class="impact-header">
+                                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-16 w-16 mx-auto mb-6 opacity-80"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                                <h2>Impacto das Suas Doações</h2>
+                            </div>
+
+                            <div class="impact-amount">
+                                <div>
+                                    <h3>R$ 50</h3>
+                                    <p>Alimenta uma criança</p>
+                                </div>
+
+                                <div>
+                                    <h3>R$ 100</h3>
+                                    <p>Alimenta mãe e filho</p>
+                                </div>
+
+                                <div>
+                                    <h3>R$ 200</h3>
+                                    <p>Alimenta uma família</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="galleries" class="gallery">
+                <div class="gallery-container">
+                    <div class="gallery-content">
+                        <h1>Nossa Galeria</h1>
+                        <p>Momentos especiais que capturam a essência do nosso trabalho e o nosso servir ao próximo com excelência.</p>
+
+                        <div class="gallery-grid">
+                            <div id="collect" class="gallery-card">
+                                <img src="assets/santos/6.jpg" alt="Fotos das coletas de doações">
+                                <div class="overlay">
+                                    <span class="tag">Ações</span>
+                                    <h2>Momento das doações</h3>
+                                    <p>Ações realizadas nas cidades de Santos, Peruíbe, Itanhaém, Suzano e São Bernardo do Campo</p>
+                                </div>
+                            </div>
+
+                            <div id="organization" class="gallery-card">
+                                <img src="assets/coletas/9.jpg" alt="Fotos das organizações de doações">
+                                <div class="overlay">
+                                    <span class="tag">Coletas</span>
+                                    <h2>Coleta de doações</h3>
+                                    <p>Mostra os momentos de coleta de doações</p>
+                                </div>
+                            </div>
+
+                            <div id="participation" class="gallery-card">
+                                <img src="assets/eventos/16.jpg" alt="Fotos das participações em eventos">
+                                <div class="overlay">
+                                    <span>Participações</span>
+                                    <h2>Apresentando-se ao mundo</h3>
+                                    <p>As oportunidades do mundo conhecer o nosso trabalho</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-grid">
+                            <div class="info">
+                                <div class="icon gallery-pink"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg></div>
+                                <h2>Amor em Ação</h2>
+                                <p>Cada foto conta uma história de amor e dedicação</p>
+                            </div>
+                            <div class="info">
+                                <div class="icon gallery-purple"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-purple-500 mb-4"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                                <h2>Comunidade Unida</h2>
+                                <p>Fortalecendo laços e construindo relacionamentos</p>
+                            </div>
+                            <div class="info">
+                                <div class="icon gallery-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-blue-500 mb-4"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></svg></div>
+                                <h2>Transformação</h2>
+                                <p>Momentos que marcam vidas para sempre</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="volunteers" class="volunteer">
+                <div class="volunteer-container">
+                    <div class="volunteer-content">
+                        <h1>Seja um Voluntário</h1>
+                        <p>Junte-se à nossa família de voluntários e faça parte da transformação de vidas. Sua dedicação e amor podem fazer toda a diferença.</p>
+
+                        <div class="volunteer-cards">
+                            <div class="card-content pink-background">
+                                <div class="icon-circle pink"><i class="fa-solid fa-heart"></i></div>
+                                <h2>Retirada de doações</h2>
+                                <p>Nos ajude retirando doações nos pontos de coleta.</p>
+                                <span class="time">Horário livre</span>
+                                <button class="btn-volunteer pink" onclick="sendMessageToWppOfVolunteer('Retirada de doações')">Candidatar-se</button>
+                            </div>
+
+                            <div class="card-content blue-background">
+                                <div class="icon-circle blue"><i class="fa-solid fa-clock"></i></div>
+                                <h2>Organizar Doações</h2>
+                                <p>Triagem e organização das doações recebidas.</p>
+                                <span class="time">Horário livre</span>
+                                <button class="btn-volunteer blue" onclick="sendMessageToWppOfVolunteer('Organizar doações')">Candidatar-se</button>
+                            </div>
+
+                            <div class="card-content green-background">
+                                <div class="icon-circle green"><i class="fa-solid fa-award"></i></div>
+                                <h2>Especialista</h2>
+                                <p>Compartilhe suas experiências e habilidades conosco.</p>
+                                <span class="time">Horário livre</span>
+                                <button class="btn-volunteer green" onclick="sendMessageToWppOfVolunteer('Especialista')">Candidatar-se</button>
+                            </div>
+                        </div>
+
+                        <div class="reason-grid">
+                            <div>
+                                <h3 style="font-size: 1.875rem; font-weight: bold; color: #ec4899; margin-bottom: 1.5rem;">Por que ser voluntário?</h3>
+
+                                <div class="reason-item">
+                                    <div class="reason-icon"><i class="fa-solid fa-heart"></i></div>
+                                    <div class="reason-text">
+                                        <h4>Transforme Vidas</h4>
+                                        <p>Sua dedicação pode mudar uma vida.</p>
+                                    </div>
+                                </div>
+
+                                <div class="reason-item">
+                                    <div class="reason-icon"><i class="fa-solid fa-users"></i></div>
+                                    <div class="reason-text">
+                                        <h4>Faça Parte da Comunidade</h4>
+                                        <p>Conecte-se com pessoas que compartilham os mesmos valores.</p>
+                                    </div>
+                                </div>
+
+                                <div class="reason-item">
+                                    <div class="reason-icon"><i class="fa-solid fa-award"></i></div>
+                                    <div class="reason-text">
+                                        <h4>Desenvolva Habilidades</h4>
+                                        <p>Aprenda novas competências enquanto ajuda o próximo.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="volunteer-image">
+                                <img src="assets/voluntario1.jpg"
+                                    alt="Voluntários felizes trabalhando com crianças no Instituto Mamãe Coruja">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="fade-up" style="animation-delay: 0.1s">
+                        <div class="logo-footer">
+                            <i class="fa-solid fa-heart logo-icon"></i>
+                            <span>Instituto Mamãe Coruja</span>
+                        </div>
+                        <p class="description">
+                            Transformando vidas através do amor, cuidado e apoio às famílias em situação
+                            de vulnerabilidade. Juntos, construímos um futuro melhor.
+                        </p>
+                        <div class="socials">
+                            <a href="https://www.tiktok.com/@projetosocialmamaecoruja" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.instagram.com/instituto.mamaecoruja/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="fade-up" style="animation-delay: 0.3s">
+                        <span class="footer-title">Links Rápidos</span>
+                        <ul class="footer-links">
+                            <li><a href="#home">Início</a></li>
+                            <li><a href="#aboutus">Sobre Nós</a></li>
+                            <li><a href="#project-founder">Fundadora</a></li>
+                            <li><a href="#help">Doação</a></li>
+                            <li><a href="#galleries">Galeria</a></li>
+                            <li><a href="#volunteers">Voluntários</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="fade-up" style="animation-delay: 0.5s">
+                        <span class="footer-title">Contato</span>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>instituto.mamaecoruja@yahoo.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>(11) 98382-9301</span>
+                        </div>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.3529987963725!2d-46.74508862383632!3d-24.159349883835073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d1d60222dfd171%3A0x2066a8c13faf5e13!2sR.%20Rog%C3%AA%20Ferreira%2C%205205%20-%20Jardim%20Suar%C3%A3o%20-%20Praia%2C%20Itanha%C3%A9m%20-%20SP%2C%2011740-000!5e0!3m2!1spt-BR!2sbr!4v1767304025030!5m2!1spt-BR!2sbr"
+                            title="Localização da sede"
+                            width="350"
+                            height="350"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="footer-bottom fade-up" style="animation-delay: 0.7s">
+                    <p>© 2025 Instituto Mamãe Coruja. Todos os direitos reservados.</p>
+                    <p>Desenvolvido por <a href="https://www.linkedin.com/in/gustavo-manssur-1a4b5a1a0/" style="text-decoration: underline; color: rgba(255, 255, 255, 0.6);">Gustavo Manssur</a></p>
+                </div>
+            </footer>
+        </div>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "NGO",
+            "name": "Instituto Mamãe Coruja",
+            "url": "https://www.institutomamaecoruja.com.br",
+            "logo": "https://www.institutomamaecoruja.com.br/assets/logo.png",
+            "description": "Instituto que transforma vidas através do amor, cuidado e apoio a famílias em situação de vulnerabilidade social.",
+            "areaServed": "BR",
+            "sameAs": [
+                "https://www.instagram.com/institutomamaecoruja",
+                "https://www.facebook.com/institutomamaecoruja"
+            ]
+        }
+        </script>
+
+        <script src="scripts/index.js"></script>
+    </body>
+</html>

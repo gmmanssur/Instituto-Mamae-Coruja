@@ -1,0 +1,12 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Concert One', sans-serif;
+    background: linear-gradient(90deg, #634fb6, #7a458b);
+    overflow-x: hidden;
+}

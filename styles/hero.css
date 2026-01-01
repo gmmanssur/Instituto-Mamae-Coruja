@@ -1,0 +1,463 @@
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 40px;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+.hero-content {
+    flex: 1;
+    order: 1;
+}
+
+.hero-title {
+    font-size: clamp(32px, 7vw, 48px);
+    line-height: 1.2;
+    color: #fff;
+}
+
+.hero-title-highlight {
+    background: linear-gradient( to right, #ff1361 0%, #ff6b6b 33%, #f8ffae 66%, #ff1361 100% );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: wave-animation 4s linear infinite;
+    background-size: 200% auto;
+}
+
+@keyframes wave-animation {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.hero-description {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 1rem;
+    max-width: 520px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.hero-media {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    order: 2;
+}
+
+.hero-media img {
+    width: 100%;
+    max-width: 360px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.stat {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    font-size: 0.9rem;
+}
+
+.stat-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: block;
+    color: #ffd54f;
+}
+
+.stat-label {
+    color: #fff;
+}
+
+.btn {
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #ff5c8d, #ff6fb5);
+    box-shadow: 0 0 15px rgba(255, 92, 141, 0.5);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5rem;
+    text-decoration: none;
+    transition: transform 0.2s;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+}
+
+.btn-secondary {
+    text-align: center;
+    color: rgb(123, 77, 211);
+    background: #fff;
+    border: none;
+    border-radius: 5rem;
+    text-decoration: none;
+    transition: transform 0.2s;
+    padding: 0.8rem 2rem;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    transform: scale(1.05);
+}
+
+.donations {
+    top: 5%;
+    right: -14%;
+}
+
+.families {
+    bottom: 17%;
+    left: -15%;
+}
+
+.joinProject {
+    position: relative;
+    width: min(80vw, 720px);
+    max-height: 90vh;
+}
+
+#join {
+    width: 100%;
+    max-width: 85vw;
+    min-height: 100vh;
+    align-content: center;
+    margin: 0 auto;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#join.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@keyframes popupEnter {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.popUpJoin {
+    text-align: center;
+    position: relative;
+    overflow-y: auto;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    border-radius: 2rem;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(18px);
+    animation: popupEnter 0.6s ease-out;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.close-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.formHeader {
+    text-align: center;
+}
+
+.formHeader h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 0.5rem;
+}
+
+.formHeader p {
+    font-size: clamp(0.95rem, 1.2vw, 1rem);
+    margin-top: 1rem;
+    opacity: 0.85;
+}
+
+.formHeader img {
+    width: 180px;
+    margin: 1rem auto;
+}
+
+.joinForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.joinForm label {
+    font-size: clamp(1rem, 1.3vw, 1.1rem);
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.joinForm input,
+.joinForm select {
+    width: 100%;
+    max-width: 100%;
+    min-width: 250px;
+    padding: 0.9rem 1rem;
+    border-radius: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    outline: none;
+    backdrop-filter: blur(10px);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.3s ease,
+        border 0.3s ease;
+}
+
+.joinForm select option {
+    background: #fff;
+    color: #000;
+    font-weight: 400;
+}
+
+.joinForm input:focus,
+.joinForm select:focus {
+    transform: translateY(-2px);
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.name, .phone, .field {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-submit {
+    position: relative;
+    padding: 0.7rem;
+    border-radius: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    width: 200px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+body.modal-open, html.modal-open {
+    overflow: hidden;
+}
+
+.custom-alert {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+
+    padding: 0.9rem 1.5rem;
+    border-radius: 2rem;
+
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 0.9rem;
+    letter-spacing: 0.6px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+
+    z-index: 10000;
+}
+
+.custom-alert.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        animation: none;
+        transition: none;
+    }
+
+    .hero-content {
+        animation: fadeUp 0.8s ease forwards;
+    }
+
+    .hero-media {
+        animation: fadeUp 0.9s ease forwards;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .hero-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 64px;
+    }
+
+    .hero-media img {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .popUpJoin {
+        width: 85vw;
+    }
+
+    .btn-submit {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    #join{
+        width: fit-content;
+    }
+    
+    .popUpJoin {
+        width: 92vw;
+        max-height: 92vh;
+        padding: 1.25rem;
+        gap: 1.25rem;
+        border-radius: 1.4rem;
+    }
+
+    .formHeader {
+        margin-top: 0.5rem;
+    }
+
+    .formHeader h2 {
+        font-size: 1.3rem;
+    }
+
+    .formHeader p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .formHeader img {
+        width: 140px;
+    }
+
+    .joinForm {
+        gap: 1.2rem;
+    }
+
+    .joinForm label {
+        font-size: 0.95rem;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
+    .closeBtn {
+        top: 0.8rem;
+        right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .joinProject {
+        gap: 2rem;
+        border-radius: 1.5rem;
+    }
+
+    .close-icon {
+        font-size: 1.7rem;
+    }
+}
