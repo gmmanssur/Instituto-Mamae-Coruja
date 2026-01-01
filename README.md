@@ -40,13 +40,13 @@ Estruturação semântica do conteúdo, respeitando hierarquia de tags, acessibi
 **CSS3**
 Estilização moderna, responsiva e organizada, utilizando conceitos como:
 
-Layout fluido
+- Layout fluido
 
-Responsividade (mobile-first)
+- Responsividade (mobile-first)
 
-Reutilização de estilos
+- Reutilização de estilos
 
-Legibilidade e manutenção do código
+- Legibilidade e manutenção do código
 
 **JavaScript**
 Responsável pelo comportamento dinâmico da aplicação, interações com o usuário e controle de componentes visuais.
